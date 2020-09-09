@@ -40,8 +40,7 @@ class CommentController extends Controller
         $validatedData = $request->validate([
             'comment' => 'required|min:5',
             ]);
-        $comment=new Comment;
-        $comment->comment =$request->input('comment');
+        $comment=new Comment($request->all());
         $comment->article_id =$id;
         $comment->save();
         return redirect('articles/'.$id)->with('success', 'Success');
