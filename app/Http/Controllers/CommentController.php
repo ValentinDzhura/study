@@ -45,7 +45,6 @@ class CommentController extends Controller
         $comment->save();
         return redirect('articles/'.$id)->with('success', 'Success');
     }
-
     /**
      * Display the specified resource.
      *
