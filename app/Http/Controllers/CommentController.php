@@ -27,8 +27,7 @@ class CommentController extends Controller
     public function create()
     {
         return view('articles.show');
-      
-    }
+       }
 
     /**
      * Store a newly created resource in storage.
